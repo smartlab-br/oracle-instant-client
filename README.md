@@ -1,2 +1,2 @@
 # oracle-instant-client
-Oracle Instant Client to be used as base of apps that requires Oracle connection
+Oracle Instant Client, based on Ubuntu, to be used as base of apps that requires Oracle connection.
