@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM python:3.5
 
 LABEL maintainer="smartlab-dev@mpt.mp.br"
 
@@ -9,7 +9,7 @@ ENV LD_LIBRARY_PATH=$ORACLE_BASE \
     ORACLE_HOME=$ORACLE_BASE
 
 RUN apt-get update \
- && apt-get install -y unzip libaio1 wget \
+ && apt-get install -y unzip libaio1 wget python3-psycopg2 \
  && wget -q -O /tmp/basic.zip https://midia-ext.mpt.mp.br/smartlab/instantclient-basic-linux.x64-12.1.0.2.0.zip \
  && wget -q -O /tmp/sdk.zip https://midia-ext.mpt.mp.br/smartlab/instantclient-sdk-linux.x64-12.1.0.2.0.zip \
  && unzip -q /tmp/basic.zip -d /usr/lib \
